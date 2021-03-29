@@ -8,11 +8,13 @@ export class HmsAvailabilityWeb extends WebPlugin implements HmsAvailabilityPlug
       platforms: ['web'],
     });
   }
-
-  async echo(options: { value: string }): Promise<{ value: string }> {
-    console.log('ECHO', options);
-    return options;
+  async isHmsAvailable(): Promise<{ isAvailable: boolean; }> {
+    throw new Error('Not supported int the web.');
   }
+  async isGmsAvailable(): Promise<{ isAvailable: boolean; }> {
+    throw new Error('Not supported int the web.');
+  }
+ 
 }
 
 const HmsAvailability = new HmsAvailabilityWeb();

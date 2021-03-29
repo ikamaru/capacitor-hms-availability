@@ -5,5 +5,6 @@ declare module '@capacitor/core' {
 }
 
 export interface HmsAvailabilityPlugin {
-  echo(options: { value: string }): Promise<{ value: string }>;
+  isHmsAvailable():Promise<{isAvailable:boolean}>;
+  isGmsAvailable():Promise<{isAvailable:boolean}>;
 }
